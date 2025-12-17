@@ -12,12 +12,12 @@ Serviços são o que você oferece aos seus clientes. Cada serviço tem nome, du
 
 Um serviço representa uma atividade que pode ser agendada:
 
-```
-Barbearia
-├── Corte de Cabelo      → 30 min - R$ 40
-├── Barba                → 20 min - R$ 25
-├── Corte + Barba        → 45 min - R$ 55
-└── Hidratação           → 40 min - R$ 60
+```mermaid
+graph TD
+    A[🏪 Barbearia] --> B[✂️ Corte de Cabelo<br/>30 min - R$ 40]
+    A --> C[🧔 Barba<br/>20 min - R$ 25]
+    A --> D[💇 Corte + Barba<br/>45 min - R$ 55]
+    A --> E[💧 Hidratação<br/>40 min - R$ 60]
 ```
 
 ## Acessando Serviços
@@ -141,12 +141,12 @@ Para que um serviço apareça no agendamento:
 3. Edite o profissional
 4. Na aba **Serviços**, adicione o serviço
 
-```
-Profissional: João
-└── Serviços vinculados
-    ├── Corte de Cabelo     → R$ 50,00
-    ├── Barba               → R$ 30,00
-    └── Corte + Barba       → R$ 75,00
+```mermaid
+graph LR
+    A[👨‍💼 João] --> B[Serviços vinculados]
+    B --> C[✂️ Corte - R$ 50]
+    B --> D[🧔 Barba - R$ 30]
+    B --> E[💇 Corte + Barba - R$ 75]
 ```
 
 > [!WARNING]
