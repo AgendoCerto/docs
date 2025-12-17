@@ -1,6 +1,7 @@
 ---
 title: Guia de Canais
 description: Aprenda a configurar e gerenciar canais de comunicação no Agendo Certo
+order: 5
 ---
 
 # Guia de Canais

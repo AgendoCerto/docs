@@ -1,6 +1,7 @@
 ---
 title: Guia de Profissionais
 description: Aprenda a cadastrar e gerenciar profissionais no Agendo Certo
+order: 3
 ---
 
 # Guia de Profissionais

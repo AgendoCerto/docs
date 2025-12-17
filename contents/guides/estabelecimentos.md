@@ -1,6 +1,7 @@
 ---
 title: Guia de Estabelecimentos
 description: Aprenda a configurar e gerenciar estabelecimentos no Agendo Certo
+order: 1
 ---
 
 # Guia de Estabelecimentos

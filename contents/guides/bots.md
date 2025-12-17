@@ -1,6 +1,7 @@
 ---
 title: Guia de Bots
 description: Aprenda a criar e gerenciar bots no Agendo Certo
+order: 4
 ---
 
 # Guia de Bots

@@ -1,0 +1,91 @@
+name: Generate Docs Index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'contents/**/*.md'
+      - '.github/workflows/generate-index.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate index.json
+        run: |
+          echo "Generating index.json from markdown files..."
+          
+          # Start JSON array
+          echo "[" > index.json.tmp
+          
+          first=true
+          
+          # Find all markdown files in contents/
+          find contents -name "*.md" -type f | sort | while read -r file; do
+            # Extract relative path (remove contents/ prefix)
+            relpath="${file#contents/}"
+            
+            # Extract frontmatter values using grep and sed
+            title=$(grep -m1 "^title:" "$file" | sed 's/^title:[[:space:]]*//' | sed 's/^["'\'']\|["'\'']$//g' || echo "")
+            description=$(grep -m1 "^description:" "$file" | sed 's/^description:[[:space:]]*//' | sed 's/^["'\'']\|["'\'']$//g' || echo "")
+            order=$(grep -m1 "^order:" "$file" | sed 's/^order:[[:space:]]*//' || echo "999")
+            
+            # Extract category from path (first directory)
+            category=$(echo "$relpath" | cut -d'/' -f1)
+            
+            # If no title in frontmatter, generate from filename
+            if [ -z "$title" ]; then
+              filename=$(basename "$file" .md)
+              # Remove leading numbers and dashes, capitalize
+              title=$(echo "$filename" | sed 's/^[0-9]*-//' | sed 's/-/ /g' | sed 's/\b\(.\)/\u\1/g')
+            fi
+            
+            # If order not set, try to extract from filename
+            if [ "$order" = "999" ]; then
+              filename=$(basename "$file" .md)
+              extracted_order=$(echo "$filename" | grep -oE "^[0-9]+" || echo "999")
+              order="$extracted_order"
+            fi
+            
+            # Add comma before entries (except first)
+            if [ "$first" = true ]; then
+              first=false
+            else
+              echo "," >> index.json.tmp
+            fi
+            
+            # Write JSON entry
+            cat >> index.json.tmp << EOF
+          {
+            "path": "$relpath",
+            "title": "$title",
+            "description": "$description",
+            "category": "$category",
+            "order": $order
+          }
+          EOF
+          done
+          
+          # Close JSON array
+          echo "]" >> index.json.tmp
+          
+          # Format and validate JSON
+          cat index.json.tmp | python3 -m json.tool > index.json 2>/dev/null || mv index.json.tmp index.json
+          rm -f index.json.tmp
+          
+          echo "Generated index.json:"
+          cat index.json
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add index.json
+          git diff --staged --quiet || git commit -m "🤖 Auto-generate index.json"
+          git push

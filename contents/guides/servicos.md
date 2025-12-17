@@ -1,6 +1,7 @@
 ---
 title: Guia de Serviços
 description: Aprenda a cadastrar e gerenciar serviços no Agendo Certo
+order: 2
 ---
 
 # Guia de Serviços
