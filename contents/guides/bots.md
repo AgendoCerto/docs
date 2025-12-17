@@ -63,10 +63,14 @@ Para usuários avançados:
 
 Um bot é composto por **nós** (componentes) e **conexões** (arestas):
 
-```
-[Início] → [Mensagem] → [Botões] → [Serviços] → [Profissional] → [Agendamento]
-                           ↓
-                    [Atendimento Humano]
+```mermaid
+graph LR
+    A[🎬 Início] --> B[💬 Mensagem]
+    B --> C[🔘 Botões]
+    C -->|Agendar| D[🛠️ Serviços]
+    C -->|Atendimento| G[👤 Humano]
+    D --> E[👔 Profissional]
+    E --> F[📅 Agendamento]
 ```
 
 ### Componentes Principais
@@ -126,13 +130,12 @@ Como posso ajudar você hoje?
 
 Cria menu com opções clicáveis:
 
-```
-Texto: O que deseja fazer?
-
-Botões:
-├── 📅 Agendar Horário
-├── 📋 Meus Agendamentos
-└── 💬 Falar com Atendente
+```mermaid
+graph TD
+    A[💬 O que deseja fazer?]
+    A --> B[📅 Agendar Horário]
+    A --> C[📋 Meus Agendamentos]
+    A --> D[💬 Falar com Atendente]
 ```
 
 ### Seleção de Serviço
@@ -225,18 +228,13 @@ O Agendo Certo mantém histórico de versões:
 
 Combine bot com atendimento humano:
 
-```
-Bot conversa com cliente
-   ↓
-Cliente pede atendente
-   ↓
-Bot transfere para humano
-   ↓
-Atendente assume a conversa
-   ↓
-Atendente finaliza
-   ↓
-Bot retoma o controle
+```mermaid
+graph TD
+    A[🤖 Bot conversa] --> B[Cliente pede atendente]
+    B --> C[🔄 Bot transfere]
+    C --> D[👤 Atendente assume]
+    D --> E[✅ Atendente finaliza]
+    E --> F[🤖 Bot retoma]
 ```
 
 ### Componente de Atendimento

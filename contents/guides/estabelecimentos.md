@@ -12,11 +12,11 @@ O estabelecimento é a base do seu negócio no Agendo Certo. Aqui você configur
 
 Um estabelecimento representa uma unidade do seu negócio. Se você tem várias filiais, cada uma será um estabelecimento diferente.
 
-```
-Seu Negócio
-├── Unidade Centro     → Estabelecimento 1
-├── Unidade Shopping   → Estabelecimento 2
-└── Unidade Bairro     → Estabelecimento 3
+```mermaid
+graph TD
+    A[🏢 Seu Negócio] --> B[📍 Unidade Centro]
+    A --> C[🛒 Unidade Shopping]
+    A --> D[🏘️ Unidade Bairro]
 ```
 
 ## Acessando Estabelecimentos

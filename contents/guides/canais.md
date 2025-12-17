@@ -12,8 +12,11 @@ Canais são as conexões entre seus bots e as plataformas de mensagens. É atrav
 
 Um canal conecta seu bot a uma plataforma:
 
-```
-WhatsApp Business ←→ Canal ←→ Bot ←→ Agendo Certo
+```mermaid
+graph LR
+    A[📱 WhatsApp Business] <--> B[🔗 Canal]
+    B <--> C[🤖 Bot]
+    C <--> D[📅 Agendo Certo]
 ```
 
 ### Tipos de Canal
@@ -86,12 +89,12 @@ Para usar o WhatsApp Business API:
 
 ### Processo de Configuração
 
-```
-1. Verificar empresa no Meta
-2. Registrar número de telefone
-3. Configurar conta WABA
-4. Conectar ao Agendo Certo
-5. Vincular bot ao canal
+```mermaid
+graph TD
+    A[1️⃣ Verificar empresa no Meta] --> B[2️⃣ Registrar telefone]
+    B --> C[3️⃣ Configurar WABA]
+    C --> D[4️⃣ Conectar ao Agendo Certo]
+    D --> E[5️⃣ Vincular bot ao canal]
 ```
 
 > [!NOTE]
@@ -132,10 +135,12 @@ Para usar o WhatsApp Business API:
 
 O WhatsApp tem uma regra importante:
 
-```
-Cliente envia mensagem → Janela abre → 24 horas para responder
-                                                  ↓
-                              Janela fecha → Só templates permitidos
+```mermaid
+graph LR
+    A[💬 Cliente envia] --> B[🔓 Janela abre]
+    B --> C[⏰ 24 horas]
+    C -->|Dentro| D[✅ Responder normalmente]
+    C -->|Fora| E[📄 Só templates]
 ```
 
 > [!TIP]
@@ -177,11 +182,12 @@ Acompanhe o desempenho do canal:
 
 Você pode ter vários canais ativos:
 
-```
-Empresa XYZ
-├── Canal de Teste → Bot de Desenvolvimento
-├── WhatsApp Vendas → Bot Comercial
-└── WhatsApp Suporte → Bot de Suporte
+```mermaid
+graph TD
+    A[🏢 Empresa XYZ]
+    A --> B[🧪 Canal de Teste<br/>Bot Desenvolvimento]
+    A --> C[💼 WhatsApp Vendas<br/>Bot Comercial]
+    A --> D[🆘 WhatsApp Suporte<br/>Bot de Suporte]
 ```
 
 ### Casos de Uso

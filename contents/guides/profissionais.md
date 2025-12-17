@@ -12,18 +12,20 @@ Profissionais são as pessoas que realizam os serviços. Cada profissional tem s
 
 Um profissional representa um membro da sua equipe:
 
-```
-Equipe da Barbearia
-├── João (Barbeiro Sênior)
-│   ├── Serviços: Corte, Barba, Pigmentação
-│   └── Horário: Seg-Sáb 09:00-18:00
-│
-├── Pedro (Barbeiro)
-│   ├── Serviços: Corte, Barba
-│   └── Horário: Ter-Sáb 10:00-19:00
-│
-└── Maria (Recepcionista)
-    └── Horário: Seg-Sex 08:00-17:00
+```mermaid
+graph TD
+    A[👥 Equipe da Barbearia]
+    A --> B[👨‍🦲 João - Sênior]
+    A --> C[👨 Pedro - Barbeiro]
+    A --> D[👩 Maria - Recepção]
+    
+    B --> B1[Corte, Barba, Pigmentação]
+    B --> B2[📅 Seg-Sáb 09h-18h]
+    
+    C --> C1[Corte, Barba]
+    C --> C2[📅 Ter-Sáb 10h-19h]
+    
+    D --> D2[📅 Seg-Sex 08h-17h]
 ```
 
 ## Acessando Profissionais
@@ -99,13 +101,12 @@ Um profissional precisa ter serviços vinculados para aparecer nos agendamentos.
 
 Cada profissional pode ter preços diferentes:
 
-```
-Serviço: Corte de Cabelo
-
-Profissionais:
-├── João (Sênior) → R$ 60,00
-├── Pedro (Pleno) → R$ 45,00
-└── Lucas (Júnior) → R$ 35,00
+```mermaid
+graph LR
+    A[✂️ Corte de Cabelo]
+    A --> B[👑 João Sênior<br/>R$ 60,00]
+    A --> C[👤 Pedro Pleno<br/>R$ 45,00]
+    A --> D[👦 Lucas Júnior<br/>R$ 35,00]
 ```
 
 > [!TIP]
@@ -189,13 +190,13 @@ Profissionais podem ter acesso ao sistema:
 
 Um profissional pode trabalhar em mais de um estabelecimento:
 
-```
-João (Barbeiro)
-├── Unidade Centro
-│   └── Seg, Qua, Sex - 09:00-18:00
-│
-└── Unidade Shopping
-    └── Ter, Qui, Sáb - 10:00-19:00
+```mermaid
+graph TD
+    A[👨‍🦲 João - Barbeiro]
+    A --> B[🏢 Unidade Centro]
+    A --> C[🛒 Unidade Shopping]
+    B --> B1[📅 Seg, Qua, Sex<br/>09h-18h]
+    C --> C1[📅 Ter, Qui, Sáb<br/>10h-19h]
 ```
 
 ### Como configurar
@@ -224,32 +225,30 @@ João (Barbeiro)
 
 ### Por Especialidade
 
-```
-Barbearia Premium
-├── Barbeiros
-│   ├── João (Corte, Barba)
-│   └── Pedro (Corte, Barba, Pigmentação)
-│
-├── Cabeleireiros
-│   ├── Maria (Corte, Coloração)
-│   └── Ana (Corte, Tratamentos)
-│
-└── Auxiliares
-    └── Lucas (Lavagem, Hidratação)
+```mermaid
+graph TD
+    A[🎪 Barbearia Premium]
+    A --> B[🦳 Barbeiros]
+    A --> C[✂️ Cabeleireiros]
+    A --> D[🧹 Auxiliares]
+    
+    B --> B1[João - Corte, Barba]
+    B --> B2[Pedro - Corte, Barba, Pigmentação]
+    
+    C --> C1[Maria - Corte, Coloração]
+    C --> C2[Ana - Corte, Tratamentos]
+    
+    D --> D1[Lucas - Lavagem, Hidratação]
 ```
 
 ### Por Experiência
 
-```
-Equipe
-├── Sênior (5+ anos)
-│   └── Preços mais altos
-│
-├── Pleno (2-5 anos)
-│   └── Preços médios
-│
-└── Júnior (0-2 anos)
-    └── Preços promocionais
+```mermaid
+graph LR
+    A[👥 Equipe]
+    A --> B[🏆 Sênior 5+ anos<br/>Preços Premium]
+    A --> C[⭐ Pleno 2-5 anos<br/>Preços Médios]
+    A --> D[🌱 Júnior 0-2 anos<br/>Preços Promo]  
 ```
 
 ---
