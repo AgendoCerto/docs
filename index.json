@@ -1,51 +1,57 @@
 [
-  {
-    "path": "getting-started/01-bem-vindo.md",
-    "title": "Bem-vindo ao Agendo Certo",
-    "description": "Conheça a plataforma e seus recursos principais",
-    "category": "getting-started",
-    "order": 1
-  },
-  {
-    "path": "getting-started/02-configuracao-inicial.md",
-    "title": "Tutorial de Configuração Inicial",
-    "description": "Configure sua conta passo a passo",
-    "category": "getting-started",
-    "order": 2
-  },
-  {
-    "path": "guides/estabelecimentos.md",
-    "title": "Guia de Estabelecimentos",
-    "description": "Aprenda a gerenciar seus estabelecimentos",
-    "category": "guides",
-    "order": 1
-  },
-  {
-    "path": "guides/servicos.md",
-    "title": "Guia de Serviços",
-    "description": "Configure os serviços oferecidos",
-    "category": "guides",
-    "order": 2
-  },
-  {
-    "path": "guides/profissionais.md",
-    "title": "Guia de Profissionais",
-    "description": "Gerencie sua equipe de profissionais",
-    "category": "guides",
-    "order": 3
-  },
-  {
-    "path": "guides/bots.md",
-    "title": "Guia de Bots",
-    "description": "Configure bots de atendimento automático",
-    "category": "guides",
-    "order": 4
-  },
-  {
-    "path": "guides/canais.md",
-    "title": "Guia de Canais",
-    "description": "Integre WhatsApp e outros canais",
-    "category": "guides",
-    "order": 5
-  }
+{
+  "path": "getting-started/01-bem-vindo.md",
+  "title": "Bem-vindo ao Agendo Certo",
+  "description": "Conheça a plataforma e descubra como automatizar o atendimento do seu negócio",
+  "category": "getting-started",
+  "order": 
+}
+,
+{
+  "path": "getting-started/02-configuracao-inicial.md",
+  "title": "Tutorial de Configuração Inicial",
+  "description": "Passo a passo completo para configurar sua conta e começar a usar o Agendo Certo",
+  "category": "getting-started",
+  "order": 
+}
+,
+{
+  "path": "guides/bots.md",
+  "title": "Guia de Bots",
+  "description": "Aprenda a criar e gerenciar bots no Agendo Certo",
+  "category": "guides",
+  "order": 4
+}
+,
+{
+  "path": "guides/canais.md",
+  "title": "Guia de Canais",
+  "description": "Aprenda a configurar e gerenciar canais de comunicação no Agendo Certo",
+  "category": "guides",
+  "order": 5
+}
+,
+{
+  "path": "guides/estabelecimentos.md",
+  "title": "Guia de Estabelecimentos",
+  "description": "Aprenda a configurar e gerenciar estabelecimentos no Agendo Certo",
+  "category": "guides",
+  "order": 1
+}
+,
+{
+  "path": "guides/profissionais.md",
+  "title": "Guia de Profissionais",
+  "description": "Aprenda a cadastrar e gerenciar profissionais no Agendo Certo",
+  "category": "guides",
+  "order": 3
+}
+,
+{
+  "path": "guides/servicos.md",
+  "title": "Guia de Serviços",
+  "description": "Aprenda a cadastrar e gerenciar serviços no Agendo Certo",
+  "category": "guides",
+  "order": 2
+}
 ]
