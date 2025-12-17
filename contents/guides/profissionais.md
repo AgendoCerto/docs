@@ -8,52 +8,51 @@ order: 3
 
 Profissionais são as pessoas que realizam os serviços. Cada profissional tem sua própria agenda, serviços e configurações.
 
-## O que são Profissionais?
+## O que são profissionais?
 
-Um profissional representa um membro da sua equipe:
+Representa um membro da sua equipe:
 
 ```mermaid
 graph TD
-    A[👥 Equipe da Barbearia]
-    A --> B[👨‍🦲 João - Sênior]
-    A --> C[👨 Pedro - Barbeiro]
-    A --> D[👩 Maria - Recepção]
+    A[Equipe da Barbearia]
+    A --> B[João - Sênior]
+    A --> C[Pedro - Barbeiro]
+    A --> D[Maria - Recepção]
     
     B --> B1[Corte, Barba, Pigmentação]
-    B --> B2[📅 Seg-Sáb 09h-18h]
+    B --> B2[Seg-Sáb 09h-18h]
     
     C --> C1[Corte, Barba]
-    C --> C2[📅 Ter-Sáb 10h-19h]
+    C --> C2[Ter-Sáb 10h-19h]
     
-    D --> D2[📅 Seg-Sex 08h-17h]
+    D --> D2[Seg-Sex 08h-17h]
 ```
 
-## Acessando Profissionais
+## Acessando profissionais
 
 1. Clique em **Configurações** no menu lateral
 2. Selecione **Profissionais**
-3. Você verá a lista de todos os profissionais
 
-## Criando um Profissional
+## Criando um profissional
 
-### Passo a Passo
+### Passo a passo
 
-1. Na lista, clique em **Novo Profissional**
+1. Clique em **Novo Profissional**
 2. Preencha as informações básicas
 3. Configure horários de trabalho
 4. Vincule serviços
 5. Clique em **Salvar**
 
-### Campos do Profissional
+### Campos do profissional
 
 | Campo | Obrigatório | Descrição |
-|-------|-------------|-----------|
-| Nome | ✅ | Nome completo |
-| E-mail | ✅ | E-mail para notificações |
-| Telefone | ❌ | Contato do profissional |
-| Foto | ❌ | Imagem do profissional |
-| Descrição | ❌ | Bio ou especialidades |
-| Ativo | ✅ | Se está disponível |
+|-------|-------------|------------|
+| Nome | Sim | Nome completo |
+| E-mail | Sim | E-mail para notificações |
+| Telefone | Não | Contato do profissional |
+| Foto | Não | Imagem do profissional |
+| Descrição | Não | Bio ou especialidades |
+| Ativo | Sim | Se está disponível |
 
 ## Horários de Trabalho
 
@@ -85,7 +84,7 @@ Se o profissional faz intervalo:
 > [!NOTE]
 > Os horários do profissional devem estar dentro do horário do estabelecimento!
 
-## Vinculando Serviços
+## Vinculando serviços
 
 Um profissional precisa ter serviços vinculados para aparecer nos agendamentos.
 
@@ -97,16 +96,16 @@ Um profissional precisa ter serviços vinculados para aparecer nos agendamentos.
 4. Selecione os serviços
 5. (Opcional) Defina preços personalizados
 
-### Preço por Profissional
+### Preço por profissional
 
 Cada profissional pode ter preços diferentes:
 
 ```mermaid
 graph LR
-    A[✂️ Corte de Cabelo]
-    A --> B[👑 João Sênior<br/>R$ 60,00]
-    A --> C[👤 Pedro Pleno<br/>R$ 45,00]
-    A --> D[👦 Lucas Júnior<br/>R$ 35,00]
+    A[Corte de Cabelo]
+    A --> B[João Sênior<br/>R$ 60,00]
+    A --> C[Pedro Pleno<br/>R$ 45,00]
+    A --> D[Lucas Júnior<br/>R$ 35,00]
 ```
 
 > [!TIP]
@@ -148,33 +147,33 @@ Visualize a agenda individual:
 
 | Cor | Significado |
 |-----|-------------|
-| 🔵 Azul | Agendamento confirmado |
-| 🟡 Amarelo | Pendente de confirmação |
-| 🔴 Vermelho | Bloqueio |
-| ⬜ Branco | Disponível |
-| ⬛ Cinza | Fora do horário |
+| Azul | Agendamento confirmado |
+| Amarelo | Pendente de confirmação |
+| Vermelho | Bloqueio |
+| Branco | Disponível |
+| Cinza | Fora do horário |
 
-## Profissionais Ativos e Inativos
+## Profissionais ativos e inativos
 
-### Status do Profissional
+### Status do profissional
 
-- **Ativo** - Disponível para agendamento
-- **Inativo** - Não aparece para clientes
+- **Ativo** — Disponível para agendamento
+- **Inativo** — Não aparece para clientes
 
 ### Quando desativar
 
-- 📤 Saiu da empresa
-- 🏥 Licença médica longa
-- 🎓 Em treinamento
+- Saiu da empresa
+- Licença médica longa
+- Em treinamento
 
 > [!TIP]
-> Desativar mantém o histórico. Excluir remove permanentemente!
+> Desativar mantém o histórico. Excluir remove permanentemente.
 
-## Permissões e Acesso
+## Permissões e acesso
 
 Profissionais podem ter acesso ao sistema:
 
-### Níveis de Acesso
+### Níveis de acesso
 
 | Nível | Permissões |
 |-------|------------|
@@ -186,17 +185,17 @@ Profissionais podem ter acesso ao sistema:
 > [!NOTE]
 > Configure acessos em **Configurações** → **Usuários**
 
-## Múltiplos Estabelecimentos
+## Múltiplos estabelecimentos
 
 Um profissional pode trabalhar em mais de um estabelecimento:
 
 ```mermaid
 graph TD
-    A[👨‍🦲 João - Barbeiro]
-    A --> B[🏢 Unidade Centro]
-    A --> C[🛒 Unidade Shopping]
-    B --> B1[📅 Seg, Qua, Sex<br/>09h-18h]
-    C --> C1[📅 Ter, Qui, Sáb<br/>10h-19h]
+    A[João - Barbeiro]
+    A --> B[Unidade Centro]
+    A --> C[Unidade Shopping]
+    B --> B1[Seg, Qua, Sex<br/>09h-18h]
+    C --> C1[Ter, Qui, Sáb<br/>10h-19h]
 ```
 
 ### Como configurar
@@ -205,32 +204,32 @@ graph TD
 2. Configure horários diferentes para cada um
 3. Vincule serviços por estabelecimento
 
-## Boas Práticas
+## Boas práticas
 
-### ✅ Faça
+### Recomendado
 
 - Adicione foto do profissional
 - Mantenha horários atualizados
 - Vincule todos os serviços que realiza
 - Configure bloqueios com antecedência
 
-### ❌ Evite
+### Evite
 
 - Deixar profissional sem serviços
 - Horários que ultrapassam o estabelecimento
 - Muitos bloqueios de última hora
 - Excluir profissional com histórico
 
-## Dicas de Organização
+## Dicas de organização
 
-### Por Especialidade
+### Por especialidade
 
 ```mermaid
 graph TD
-    A[🎪 Barbearia Premium]
-    A --> B[🦳 Barbeiros]
-    A --> C[✂️ Cabeleireiros]
-    A --> D[🧹 Auxiliares]
+    A[Barbearia Premium]
+    A --> B[Barbeiros]
+    A --> C[Cabeleireiros]
+    A --> D[Auxiliares]
     
     B --> B1[João - Corte, Barba]
     B --> B2[Pedro - Corte, Barba, Pigmentação]
@@ -241,20 +240,20 @@ graph TD
     D --> D1[Lucas - Lavagem, Hidratação]
 ```
 
-### Por Experiência
+### Por experiência
 
 ```mermaid
 graph LR
-    A[👥 Equipe]
-    A --> B[🏆 Sênior 5+ anos<br/>Preços Premium]
-    A --> C[⭐ Pleno 2-5 anos<br/>Preços Médios]
-    A --> D[🌱 Júnior 0-2 anos<br/>Preços Promo]  
+    A[Equipe]
+    A --> B[Sênior 5+ anos<br/>Preços Premium]
+    A --> C[Pleno 2-5 anos<br/>Preços Médios]
+    A --> D[Júnior 0-2 anos<br/>Preços Promo]
 ```
 
 ---
 
-## Próximos Passos
+## Próximos passos
 
-- 📖 [Guia de Serviços](/app/tutorials?doc=guides/servicos) - Configure o que oferecem
-- 📖 [Guia de Bots](/app/tutorials?doc=guides/bots) - Seleção de profissional no bot
-- 📖 [Guia de Estabelecimentos](/app/tutorials?doc=guides/estabelecimentos) - Múltiplas unidades
+- [Guia de Serviços](/app/tutorials?doc=guides/servicos) — Configure o que oferecem
+- [Guia de Bots](/app/tutorials?doc=guides/bots) — Seleção de profissional no bot
+- [Guia de Estabelecimentos](/app/tutorials?doc=guides/estabelecimentos) — Múltiplas unidades

@@ -6,24 +6,23 @@ order: 1
 
 # Guia de Estabelecimentos
 
-O estabelecimento é a base do seu negócio no Agendo Certo. Aqui você configura informações, horários e tudo que seus clientes precisam saber.
+O estabelecimento é a base do seu negócio no Agendo Certo. Configure informações, horários e dados de contato.
 
-## O que é um Estabelecimento?
+## O que é um estabelecimento?
 
-Um estabelecimento representa uma unidade do seu negócio. Se você tem várias filiais, cada uma será um estabelecimento diferente.
+Representa uma unidade do seu negócio. Se você tem várias filiais, cada uma será um estabelecimento diferente.
 
 ```mermaid
 graph TD
-    A[🏢 Seu Negócio] --> B[📍 Unidade Centro]
-    A --> C[🛒 Unidade Shopping]
-    A --> D[🏘️ Unidade Bairro]
+    A[Seu Negócio] --> B[Unidade Centro]
+    A --> C[Unidade Shopping]
+    A --> D[Unidade Bairro]
 ```
 
-## Acessando Estabelecimentos
+## Acessando estabelecimentos
 
 1. Clique em **Configurações** no menu lateral
 2. Selecione **Estabelecimentos**
-3. Você verá a lista de todos os estabelecimentos
 
 ## Informações Básicas
 
@@ -137,7 +136,7 @@ A aba Calendário oferece uma visão geral:
 | 🔴 Vermelho | Bloqueio |
 | 🟢 Verde | Horário disponível |
 
-## Múltiplos Estabelecimentos
+## Múltiplos estabelecimentos
 
 Se você tem mais de uma unidade:
 
@@ -154,16 +153,16 @@ Se você tem mais de uma unidade:
 - Serviços podem ser compartilhados ou exclusivos
 - Bots podem atender um ou múltiplos estabelecimentos
 
-## Boas Práticas
+## Boas práticas
 
-### ✅ Faça
+### Recomendado
 
 - Mantenha informações de contato atualizadas
 - Configure horários corretamente
 - Adicione bloqueios com antecedência
 - Use uma foto/logo do estabelecimento
 
-### ❌ Evite
+### Evite
 
 - Deixar campos obrigatórios em branco
 - Esquecer de atualizar horários de feriados
@@ -171,8 +170,8 @@ Se você tem mais de uma unidade:
 
 ---
 
-## Próximos Passos
+## Próximos passos
 
-- 📖 [Guia de Serviços](/app/tutorials?doc=guides/servicos) - Configure o que você oferece
-- 📖 [Guia de Profissionais](/app/tutorials?doc=guides/profissionais) - Adicione sua equipe
-- 📖 [Guia de Bots](/app/tutorials?doc=guides/bots) - Crie seu assistente virtual
+- [Guia de Serviços](/app/tutorials?doc=guides/servicos) — Configure o que você oferece
+- [Guia de Profissionais](/app/tutorials?doc=guides/profissionais) — Adicione sua equipe
+- [Guia de Bots](/app/tutorials?doc=guides/bots) — Crie seu assistente virtual

@@ -10,22 +10,22 @@ Este tutorial irá guiá-lo por todas as etapas necessárias para configurar sua
 > [!NOTE]
 > Reserve cerca de **15-20 minutos** para completar toda a configuração inicial.
 
-## Visão Geral das Etapas
+## Visão geral
 
-```
-1. Configurar Estabelecimento    ⏱️ ~5 min
-2. Cadastrar Serviços           ⏱️ ~3 min
-3. Adicionar Profissionais      ⏱️ ~3 min
-4. Criar seu Bot                ⏱️ ~2 min
-5. Configurar Canal de Teste    ⏱️ ~3 min
-6. Vincular Bot ao Canal        ⏱️ ~1 min
-```
+| Etapa | Tempo estimado |
+|-------|----------------|
+| Configurar estabelecimento | 5 min |
+| Cadastrar serviços | 3 min |
+| Adicionar profissionais | 3 min |
+| Criar bot | 2 min |
+| Configurar canal de teste | 3 min |
+| Vincular bot ao canal | 1 min |
 
 ---
 
-## Etapa 1: Configurar o Estabelecimento
+## Etapa 1: Configurar o estabelecimento
 
-O estabelecimento representa seu negócio ou unidade. É aqui que você define informações básicas, endereço e horários de funcionamento.
+O estabelecimento representa seu negócio ou unidade. Configure informações básicas, endereço e horários de funcionamento.
 
 ### Como acessar
 
@@ -35,49 +35,42 @@ O estabelecimento representa seu negócio ou unidade. É aqui que você define i
 
 ### Informações obrigatórias
 
-Preencha os seguintes campos:
-
 | Campo | Descrição | Exemplo |
-|-------|-----------|---------|
-| **Nome** | Nome do seu negócio | "Barbearia do João" |
-| **Telefone** | Contato principal | "(11) 99999-9999" |
-| **E-mail** | E-mail de contato | "contato@barbearia.com" |
+|-------|-----------|----------|
+| **Nome** | Nome do negócio | Barbearia do João |
+| **Telefone** | Contato principal | (11) 99999-9999 |
+| **E-mail** | E-mail de contato | contato@barbearia.com |
 
-### Endereço e Geolocalização
+### Endereço
 
-Preencha o endereço completo para que clientes possam encontrar você:
+Preencha o endereço completo:
 
-- **CEP** - Ao preencher, os campos serão preenchidos automaticamente
-- **Logradouro** - Rua, avenida, etc.
-- **Número** - Número do estabelecimento
-- **Complemento** - Sala, andar, etc. (opcional)
-- **Bairro** - Bairro do estabelecimento
-- **Cidade** e **Estado** - Localização
+- **CEP** — Preencha para autocompletar os demais campos
+- **Logradouro** — Rua, avenida, etc.
+- **Número** e **Complemento** (opcional)
+- **Bairro**, **Cidade** e **Estado**
 
 > [!TIP]
-> A geolocalização é usada para mostrar a localização no mapa para seus clientes. Verifique se o pin está no local correto!
+> Verifique se o pin do mapa está no local correto. A geolocalização é exibida para seus clientes.
 
-### Horário de Funcionamento
+### Horário de funcionamento
 
-Configure os dias e horários que seu estabelecimento opera:
+Configure os dias e horários de operação:
 
-1. Clique na aba **Horários**
-2. Para cada dia da semana, defina:
-   - Se está **aberto** ou **fechado**
-   - **Horário de início** (ex: 08:00)
-   - **Horário de término** (ex: 18:00)
+1. Acesse a aba **Horários**
+2. Para cada dia, defina se está aberto ou fechado
+3. Configure horário de início e término
 
 > [!WARNING]
-> Os horários do estabelecimento afetam a disponibilidade de agendamentos. Certifique-se de configurar corretamente!
+> Os horários do estabelecimento afetam a disponibilidade de agendamentos.
 
-### Calendário e Bloqueios
+### Bloqueios
 
-Você pode bloquear datas específicas (feriados, férias, etc.):
+Bloqueie datas específicas (feriados, férias):
 
 1. Acesse a aba **Bloqueios**
 2. Clique em **Adicionar Bloqueio**
-3. Selecione a data e horário
-4. Adicione uma descrição (opcional)
+3. Selecione data, horário e descrição
 
 ---
 
@@ -110,9 +103,9 @@ Serviços são o que você oferece aos clientes. Cada serviço tem um nome, dura
 
 ---
 
-## Etapa 3: Adicionar Profissionais
+## Etapa 3: Adicionar profissionais
 
-Profissionais são as pessoas que realizam os serviços. Cada profissional tem seus próprios horários e serviços.
+Profissionais são as pessoas que realizam os serviços.
 
 ### Como acessar
 
@@ -121,139 +114,119 @@ Profissionais são as pessoas que realizam os serviços. Cada profissional tem s
 
 ### Informações do profissional
 
-Preencha os dados básicos:
-
 | Campo | Descrição |
 |-------|-----------|
 | **Nome** | Nome completo |
 | **E-mail** | E-mail do profissional |
 | **Telefone** | Telefone de contato |
-| **Foto** | Imagem do profissional (opcional) |
+| **Foto** | Imagem (opcional) |
 
-### Vincular Serviços
-
-Se você cadastrou serviços na etapa anterior:
+### Vincular serviços
 
 1. Na aba **Serviços**, clique em **Adicionar Serviço**
-2. Selecione os serviços que este profissional realiza
+2. Selecione os serviços que o profissional realiza
 3. Opcionalmente, defina um preço diferente para cada serviço
 
 > [!NOTE]
 > Um profissional pode realizar vários serviços, e um serviço pode ser realizado por vários profissionais.
 
-### Horários do Profissional
+### Horários do profissional
 
-Configure a agenda do profissional:
-
-1. Acesse a aba **Horários**
-2. Defina os dias e horários de trabalho
-3. Os horários devem estar dentro do funcionamento do estabelecimento
+Configure a agenda na aba **Horários**. Os horários devem estar dentro do funcionamento do estabelecimento.
 
 ---
 
-## Etapa 4: Criar seu Bot
+## Etapa 4: Criar o bot
 
-Agora vamos criar seu assistente virtual! O bot é quem vai conversar com seus clientes no WhatsApp.
+O bot é o assistente virtual que conversa com seus clientes no WhatsApp.
 
 ### Como acessar
 
 1. Vá em **Configurações** → **Bots**
 2. Clique em **Novo Bot**
 
-### Usando um Template
-
-A forma mais fácil de começar é usando um template:
+### Usando um template
 
 1. Na tela de criação, escolha **Usar Template**
-2. Selecione um template que se adeque ao seu negócio:
-   - **Agendamento Simples** - Para serviços básicos
-   - **Agendamento Completo** - Com seleção de profissional
-   - **Atendimento Híbrido** - Bot + atendimento humano
+2. Selecione o template adequado ao seu negócio:
+   - **Agendamento Simples** — Para serviços básicos
+   - **Agendamento Completo** — Com seleção de profissional
+   - **Atendimento Híbrido** — Bot + atendimento humano
 3. Clique em **Criar Bot**
 
 > [!TIP]
-> Os templates já vêm configurados e prontos para usar! Você pode personalizá-los depois.
+> Templates já vêm configurados. Você pode personalizá-los depois.
 
-### Explorando o Bot
+### Editor do bot
 
-Após criar o bot, clique nele para abrir o editor:
+Após criar, clique no bot para abrir o editor:
 
-- **Área de trabalho** - Visualize o fluxo de conversa
-- **Componentes** - Blocos que formam o bot
-- **Configurações** - Ajustes gerais do bot
-- **Pré-visualização** - Teste o bot antes de publicar
-
-> [!NOTE]
-> Não se preocupe em entender todos os componentes agora. Os templates já vêm prontos para uso!
+- **Área de trabalho** — Fluxo de conversa
+- **Componentes** — Blocos que formam o bot
+- **Configurações** — Ajustes gerais
+- **Pré-visualização** — Teste antes de publicar
 
 ---
 
-## Etapa 5: Configurar Canal de Teste
+## Etapa 5: Configurar canal de teste
 
-O canal é a conexão entre o bot e o WhatsApp. Vamos configurar o canal de teste.
+O canal conecta o bot ao WhatsApp.
 
 ### Como acessar
 
 1. Vá em **Configurações** → **Canais**
 2. Clique no **Canal de Teste**
 
-### Sobre o Canal de Teste
+### Sobre o canal de teste
 
-O Canal de Teste é um ambiente seguro para você testar seu bot antes de colocá-lo em produção:
+Ambiente seguro para testar seu bot antes da produção:
 
-- ✅ Não envia mensagens para clientes reais
-- ✅ Permite testar todas as funcionalidades
-- ✅ Ideal para validar seu fluxo
+- Não envia mensagens para clientes reais
+- Permite testar todas as funcionalidades
+- Ideal para validar o fluxo
 
-### Números Autorizados
+### Números autorizados
 
-Para receber mensagens do canal de teste, você precisa autorizar seu número:
+Autorize seu número para receber mensagens do canal de teste:
 
 1. Na seção **Números Autorizados**, clique em **Adicionar Número**
-2. Digite seu número de WhatsApp com DDD
-3. Formato: `5511999999999` (sem espaços ou caracteres especiais)
-4. Clique em **Salvar**
+2. Digite seu número com DDD: `5511999999999`
+3. Clique em **Salvar**
 
 > [!WARNING]
-> Este passo é **obrigatório** para continuar. Sem um número autorizado, você não conseguirá testar o bot.
+> Este passo é **obrigatório**. Sem um número autorizado, não é possível testar o bot.
 
 ---
 
-## Etapa 6: Vincular Bot ao Canal
+## Etapa 6: Vincular bot ao canal
 
-Última etapa! Vamos conectar o bot que você criou ao canal de teste.
+Conecte o bot ao canal de teste.
 
 ### Como fazer
 
 1. Na tela do Canal de Teste, clique em **Editar Canal**
-2. No campo **Bot**, selecione o bot que você criou
+2. No campo **Bot**, selecione o bot criado
 3. Clique em **Salvar**
 
-### Testando seu Bot
+### Testando
 
-Agora você pode testar! 
-
-1. Abra o WhatsApp no seu celular
+1. Abra o WhatsApp
 2. Envie uma mensagem para o número do Canal de Teste
-3. O bot irá responder automaticamente!
+3. O bot responderá automaticamente
 
 > [!TIP]
 > O número do Canal de Teste está na tela de configuração do canal.
 
 ---
 
-## Parabéns! 🎉
+## Configuração concluída
 
-Você completou a configuração inicial do Agendo Certo! Seu bot já está funcionando e pronto para atender.
+Seu bot está funcionando e pronto para atender.
 
-### Próximos Passos
+### Próximos passos
 
-- 📖 [Guia de Estabelecimentos](/app/tutorials?doc=guides/estabelecimentos) - Configure múltiplas unidades
-- 📖 [Guia de Serviços](/app/tutorials?doc=guides/servicos) - Organize seus serviços
-- 📖 [Guia de Profissionais](/app/tutorials?doc=guides/profissionais) - Gerencie sua equipe
-- 📖 [Guia de Bots](/app/tutorials?doc=guides/bots) - Personalize seu assistente
-- 📖 [Guia de Canais](/app/tutorials?doc=guides/canais) - Configure WhatsApp para produção
-
-### Precisa de Ajuda?
-
-Se tiver dúvidas durante a configuração, entre em contato com nosso suporte!
+- [Guia de Estabelecimentos](/app/tutorials?doc=guides/estabelecimentos) — Configure múltiplas unidades
+- [Guia de Serviços](/app/tutorials?doc=guides/servicos) — Organize seus serviços
+- [Guia de Profissionais](/app/tutorials?doc=guides/profissionais) — Gerencie sua equipe
+- [Guia de Bots](/app/tutorials?doc=guides/bots) — Personalize seu assistente
+- [Guia de Canais](/app/tutorials?doc=guides/canais) — Configure WhatsApp para produção

@@ -3,50 +3,44 @@ title: Bem-vindo ao Agendo Certo
 description: Conheça a plataforma e descubra como automatizar o atendimento do seu negócio
 ---
 
-# Bem-vindo ao Agendo Certo! 🎉
+# Bem-vindo ao Agendo Certo
 
-O **Agendo Certo** é uma plataforma completa para automação de atendimento via WhatsApp. Com ela, você pode criar bots inteligentes que agendam serviços, respondem dúvidas e gerenciam seus clientes de forma automática.
+O **Agendo Certo** é uma plataforma de automação de atendimento via WhatsApp. Crie bots que agendam serviços, respondem dúvidas e gerenciam clientes de forma automática.
 
-## O que você pode fazer?
-
-Com o Agendo Certo, você tem acesso a recursos poderosos:
+## Recursos da plataforma
 
 | Recurso | Descrição |
 |---------|-----------|
-| 🤖 **Bots Inteligentes** | Crie fluxos de conversa personalizados |
-| 📅 **Agendamentos** | Gerencie horários e disponibilidade automaticamente |
-| 👥 **Profissionais** | Cadastre sua equipe e seus serviços |
-| 📍 **Estabelecimentos** | Configure múltiplas unidades do seu negócio |
-| 📱 **Canais** | Conecte ao WhatsApp e outros canais |
-| 📊 **Relatórios** | Acompanhe métricas e performance |
+| **Bots** | Fluxos de conversa personalizados |
+| **Agendamentos** | Gestão automática de horários e disponibilidade |
+| **Profissionais** | Cadastro de equipe e serviços |
+| **Estabelecimentos** | Configuração de múltiplas unidades |
+| **Canais** | Integração com WhatsApp |
+| **Relatórios** | Métricas e análise de performance |
 
-## Primeiros Passos
+## Primeiros passos
 
-Para começar a usar a plataforma, você precisará:
+Para começar a usar a plataforma:
 
-1. **Configurar seu estabelecimento** - Dados básicos, endereço e horários
-2. **Cadastrar seus serviços** - O que você oferece
-3. **Adicionar profissionais** - Quem realiza os serviços
-4. **Criar seu primeiro bot** - O assistente virtual
-5. **Conectar um canal** - WhatsApp para testes
+1. **Configurar estabelecimento** — Dados básicos, endereço e horários
+2. **Cadastrar serviços** — Defina o que você oferece
+3. **Adicionar profissionais** — Configure sua equipe
+4. **Criar bot** — Configure o assistente virtual
+5. **Conectar canal** — Vincule ao WhatsApp
 
 > [!TIP]
-> Siga nosso [Tutorial de Configuração Inicial](/app/tutorials?doc=getting-started/02-configuracao-inicial) para um passo a passo completo!
+> Siga o [Tutorial de Configuração Inicial](/app/tutorials?doc=getting-started/02-configuracao-inicial) para um passo a passo completo.
 
-## Estrutura da Plataforma
+## Estrutura da plataforma
 
-A plataforma é organizada em seções principais:
+### Menu principal
 
-### Menu Principal
-
-- **Dashboard** - Visão geral do seu negócio
-- **Agenda** - Visualize e gerencie agendamentos
-- **Clientes** - Base de clientes e histórico
-- **Configurações** - Estabelecimentos, serviços, profissionais, bots e canais
+- **Dashboard** — Visão geral do negócio
+- **Agenda** — Gestão de agendamentos
+- **Clientes** — Base de clientes e histórico
+- **Configurações** — Estabelecimentos, serviços, profissionais, bots e canais
 
 ### Configurações
-
-Aqui você encontra tudo que precisa para configurar seu negócio:
 
 ```
 Configurações
@@ -57,12 +51,7 @@ Configurações
 └── Canais            → Conecte ao WhatsApp
 ```
 
-## Precisa de Ajuda?
+## Próximos passos
 
-- 📚 Explore nossos [Guias](/app/tutorials) para aprender sobre cada recurso
-- 💡 Confira as [Dicas](/app/tutorials) para aproveitar ao máximo a plataforma
-- ❓ Veja as [Perguntas Frequentes](/app/tutorials) para dúvidas comuns
-
----
-
-Pronto para começar? Vamos para a [Configuração Inicial](/app/tutorials?doc=getting-started/02-configuracao-inicial)! 🚀
+- [Guias](/app/tutorials) — Aprenda sobre cada recurso
+- [Configuração Inicial](/app/tutorials?doc=getting-started/02-configuracao-inicial) — Comece a configurar sua conta

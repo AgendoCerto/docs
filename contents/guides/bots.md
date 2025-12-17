@@ -6,74 +6,73 @@ order: 4
 
 # Guia de Bots
 
-Os bots são assistentes virtuais que conversam com seus clientes no WhatsApp. Eles podem agendar serviços, responder dúvidas e muito mais!
+Bots são assistentes virtuais que conversam com seus clientes no WhatsApp. Eles podem agendar serviços, responder dúvidas e transferir para atendimento humano.
 
-## O que é um Bot?
+## O que é um bot?
 
 Um bot é um fluxo de conversa automatizado:
 
 ```
 Cliente: Olá!
    ↓
-Bot: Olá! 👋 Bem-vindo à Barbearia do João!
+Bot: Olá! Bem-vindo à Barbearia do João!
      O que você gostaria de fazer?
-     1️⃣ Agendar horário
-     2️⃣ Ver meus agendamentos
-     3️⃣ Falar com atendente
+     1. Agendar horário
+     2. Ver meus agendamentos
+     3. Falar com atendente
    ↓
 Cliente: 1
    ↓
-Bot: Ótimo! Qual serviço você deseja?
-     📋 [Lista de Serviços]
+Bot: Qual serviço você deseja?
+     [Lista de Serviços]
 ```
 
-## Acessando Bots
+## Acessando bots
 
 1. Clique em **Configurações** no menu lateral
 2. Selecione **Bots**
-3. Você verá a lista de todos os bots
 
-## Criando um Bot
+## Criando um bot
 
-### Opção 1: Usar Template (Recomendado)
+### Opção 1: Usar template (recomendado)
 
-Templates são bots prontos que você pode personalizar:
+Templates são bots prontos que podem ser personalizados:
 
 1. Clique em **Novo Bot**
 2. Escolha **Usar Template**
 3. Selecione o template desejado:
-   - **Agendamento Simples** - Fluxo básico
-   - **Agendamento Completo** - Com profissional
-   - **Atendimento Híbrido** - Bot + humano
+   - **Agendamento Simples** — Fluxo básico
+   - **Agendamento Completo** — Com seleção de profissional
+   - **Atendimento Híbrido** — Bot + atendimento humano
 4. Clique em **Criar**
 
 > [!TIP]
-> Templates já vêm configurados! Você pode personalizar mensagens e adicionar recursos depois.
+> Templates já vêm configurados. Personalize mensagens e adicione recursos depois.
 
-### Opção 2: Criar do Zero
+### Opção 2: Criar do zero
 
 Para usuários avançados:
 
 1. Clique em **Novo Bot**
 2. Escolha **Bot em Branco**
-3. Dê um nome ao bot
+3. Defina um nome
 4. Clique em **Criar**
 
-## Estrutura de um Bot
+## Estrutura de um bot
 
 Um bot é composto por **nós** (componentes) e **conexões** (arestas):
 
 ```mermaid
 graph LR
-    A[🎬 Início] --> B[💬 Mensagem]
-    B --> C[🔘 Botões]
-    C -->|Agendar| D[🛠️ Serviços]
-    C -->|Atendimento| G[👤 Humano]
-    D --> E[👔 Profissional]
-    E --> F[📅 Agendamento]
+    A[Início] --> B[Mensagem]
+    B --> C[Botões]
+    C -->|Agendar| D[Serviços]
+    C -->|Atendimento| G[Humano]
+    D --> E[Profissional]
+    E --> F[Agendamento]
 ```
 
-### Componentes Principais
+### Componentes principais
 
 | Componente | Função |
 |------------|--------|
@@ -84,47 +83,45 @@ graph LR
 | **Profissional** | Seleção de profissional |
 | **Agendamento** | Escolha de data/hora |
 | **Termos** | Aceite de termos |
-| **Atendimento** | Transfere para humano |
+| **Atendimento** | Transferência para humano |
 
-## Editor de Bot
+## Editor de bot
 
-O editor é sua área de trabalho para criar fluxos.
+### Área de trabalho
 
-### Área de Trabalho
+- **Arrastar** — Mova componentes
+- **Conectar** — Ligue saídas às entradas
+- **Zoom** — Use scroll ou botões
+- **Centralizar** — Botão de ajuste
 
-- **Arrastar** - Mova componentes
-- **Conectar** - Ligue saídas às entradas
-- **Zoom** - Use scroll ou botões
-- **Centralizar** - Botão de ajuste
+### Barra lateral
 
-### Barra Lateral
+- **Componentes** — Arraste para adicionar
+- **Configurações** — Ajustes do bot
+- **Variáveis** — Dados dinâmicos
 
-- **Componentes** - Arraste para adicionar
-- **Configurações** - Ajustes do bot
-- **Variáveis** - Dados dinâmicos
+### Barra de ferramentas
 
-### Barra de Ferramentas
+- **Salvar** — Salva alterações
+- **Desfazer/Refazer** — Ctrl+Z / Ctrl+Y
+- **Visualizar** — Testa o fluxo
+- **Publicar** — Coloca em produção
 
-- **Salvar** - Salva alterações
-- **Desfazer/Refazer** - Ctrl+Z / Ctrl+Y
-- **Visualizar** - Testa o fluxo
-- **Publicar** - Coloca em produção
-
-## Componentes Essenciais
+## Componentes essenciais
 
 ### Mensagem
 
 Envia uma mensagem de texto:
 
 ```
-Olá {{cliente.nome}}! 👋
+Olá {{cliente.nome}}!
 
 Seja bem-vindo à Barbearia do João!
 Como posso ajudar você hoje?
 ```
 
 > [!TIP]
-> Use `{{variavel}}` para personalizar mensagens!
+> Use `{{variavel}}` para personalizar mensagens.
 
 ### Botões
 
@@ -132,31 +129,25 @@ Cria menu com opções clicáveis:
 
 ```mermaid
 graph TD
-    A[💬 O que deseja fazer?]
-    A --> B[📅 Agendar Horário]
-    A --> C[📋 Meus Agendamentos]
-    A --> D[💬 Falar com Atendente]
+    A[O que deseja fazer?]
+    A --> B[Agendar Horário]
+    A --> C[Meus Agendamentos]
+    A --> D[Falar com Atendente]
 ```
 
-### Seleção de Serviço
-
-Lista serviços disponíveis:
+### Seleção de serviço
 
 - Mostra serviços ativos
 - Exibe preço e duração
 - Cliente seleciona um
 
-### Seleção de Profissional
-
-Lista profissionais disponíveis:
+### Seleção de profissional
 
 - Filtra por serviço selecionado
 - Mostra foto e nome
 - Opção "qualquer profissional"
 
 ### Agendamento
-
-Permite escolher data e hora:
 
 - Mostra dias disponíveis
 - Horários livres do profissional
@@ -191,7 +182,7 @@ Seu agendamento está confirmado:
 Te esperamos!
 ```
 
-## Publicando o Bot
+## Publicando o bot
 
 Após criar ou editar o bot:
 
@@ -200,19 +191,17 @@ Após criar ou editar o bot:
 3. Confirme a publicação
 
 > [!WARNING]
-> A publicação substitui a versão em produção! Sempre teste antes.
+> A publicação substitui a versão em produção. Sempre teste antes.
 
 ### Versões
 
-O Agendo Certo mantém histórico de versões:
+- **Rascunho** — Versão em edição
+- **Produção** — Versão ativa
+- **Histórico** — Versões anteriores
 
-- **Rascunho** - Versão em edição
-- **Produção** - Versão ativa
-- **Histórico** - Versões anteriores
+## Testando o bot
 
-## Testando o Bot
-
-### No Editor
+### No editor
 
 1. Clique em **Visualizar** ou **Testar**
 2. Uma simulação abrirá
@@ -224,45 +213,44 @@ O Agendo Certo mantém histórico de versões:
 2. Vincule o bot ao canal
 3. Envie mensagem para o número de teste
 
-## Atendimento Híbrido
+## Atendimento híbrido
 
 Combine bot com atendimento humano:
 
 ```mermaid
 graph TD
-    A[🤖 Bot conversa] --> B[Cliente pede atendente]
-    B --> C[🔄 Bot transfere]
-    C --> D[👤 Atendente assume]
-    D --> E[✅ Atendente finaliza]
-    E --> F[🤖 Bot retoma]
+    A[Bot conversa] --> B[Cliente pede atendente]
+    B --> C[Bot transfere]
+    C --> D[Atendente assume]
+    D --> E[Atendente finaliza]
+    E --> F[Bot retoma]
 ```
 
-### Componente de Atendimento
+### Componente de atendimento
 
 - Verifica horário comercial
 - Checa disponibilidade de atendentes
 - Transfere a conversa
 - Notifica sobre fila
 
-## Boas Práticas
+## Boas práticas
 
-### ✅ Faça
+### Recomendado
 
 - Comece com templates
 - Use mensagens curtas e claras
-- Adicione emojis com moderação
 - Teste antes de publicar
 - Ofereça opção de atendente
 
-### ❌ Evite
+### Evite
 
 - Mensagens muito longas
 - Muitas opções de uma vez
 - Fluxos muito complexos
 - Publicar sem testar
-- Ignorar fallbacks (erro)
+- Ignorar fallbacks (tratamento de erro)
 
-## Dicas Avançadas
+## Configurações avançadas
 
 ### Fallback
 
@@ -270,25 +258,25 @@ Configure o que acontece quando o cliente envia algo inesperado:
 
 ```
 Bot: Escolha uma opção:
-     1️⃣ Agendar
-     2️⃣ Cancelar
+     1. Agendar
+     2. Cancelar
 
 Cliente: "Quero saber o preço"
 
 Bot: Desculpe, não entendi. 
      Por favor, escolha uma das opções:
-     1️⃣ Agendar
-     2️⃣ Cancelar
+     1. Agendar
+     2. Cancelar
 ```
 
-### Horário Comercial
+### Horário comercial
 
 Configure o bot para horários específicos:
 
 - **Dentro do horário** → Fluxo normal
 - **Fora do horário** → Mensagem especial
 
-### Múltiplos Estabelecimentos
+### Múltiplos estabelecimentos
 
 Se você tem várias unidades:
 
@@ -298,8 +286,8 @@ Se você tem várias unidades:
 
 ---
 
-## Próximos Passos
+## Próximos passos
 
-- 📖 [Guia de Canais](/app/tutorials?doc=guides/canais) - Conecte seu bot ao WhatsApp
-- 📖 [Guia de Serviços](/app/tutorials?doc=guides/servicos) - Configure serviços
-- 📖 [Guia de Profissionais](/app/tutorials?doc=guides/profissionais) - Configure equipe
+- [Guia de Canais](/app/tutorials?doc=guides/canais) — Conecte seu bot ao WhatsApp
+- [Guia de Serviços](/app/tutorials?doc=guides/servicos) — Configure serviços
+- [Guia de Profissionais](/app/tutorials?doc=guides/profissionais) — Configure equipe
