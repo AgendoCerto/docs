@@ -33,41 +33,76 @@ graph LR
 1. Clique em **Configurações** no menu lateral
 2. Selecione **Canais**
 
-## Canal de teste
+## Canal de teste (Sandbox)
 
-Ambiente seguro para testar seus bots.
+O canal de teste é um ambiente sandbox que utiliza a infraestrutura oficial da Meta para WhatsApp Business API. Ele permite testar seus bots antes de colocá-los em produção, sem afetar clientes reais e sem custos de mensagens.
 
-### Características
+### Como funciona
 
-- Não afeta clientes reais
-- Funcionalidades completas
-- Mensagens gratuitas
-- Ideal para desenvolvimento
+O canal de teste utiliza um número compartilhado da Meta (`+1 555 190-6729`) como ponto de entrada. Para diferenciar cada usuário, o sistema identifica as mensagens pelo número do **remetente** (seu telefone cadastrado).
 
-### Configuração
+```mermaid
+graph TD
+    A[Seu telefone] -->|Envia mensagem| B[Número da Meta<br/>+1 555 190-6729]
+    B -->|Identifica remetente| C[Agendo Certo]
+    C -->|Verifica cadastro| D{Número autorizado?}
+    D -->|Sim| E[Roteia para seu canal de teste]
+    D -->|Não| F[Mensagem ignorada]
+    E --> G[Bot responde]
+```
 
-1. Clique no **Canal de Teste**
-2. Veja o número do canal
-3. Adicione números autorizados
-4. Vincule um bot
+### Passo a passo para testar
+
+1. **Vincule um bot ao canal de teste**
+   - Acesse o canal de teste
+   - Clique em **Editar Canal**
+   - Selecione o bot que deseja testar
+   - Salve as alterações
+
+2. **Cadastre seu número de telefone**
+   - Na seção **Números Autorizados**, clique em **Adicionar Número**
+   - Digite seu número no formato internacional: `+5511999999999`
+   - Clique em **Salvar**
+
+3. **Envie uma mensagem de teste**
+   - No WhatsApp, adicione o número `+1 555 190-6729` aos seus contatos
+   - Envie qualquer mensagem para esse número
+   - O bot vinculado ao seu canal responderá automaticamente
 
 ### Números autorizados
 
-Apenas números autorizados podem testar:
+Cada canal de teste pode ter até **30 números autorizados**. Apenas telefones cadastrados conseguem interagir com o bot no ambiente sandbox.
 
-1. Na seção **Números Autorizados**
-2. Clique em **Adicionar Número**
-3. Digite o número com DDD: `5511999999999`
-4. Clique em **Salvar**
+| Campo | Formato | Exemplo |
+|-------|---------|---------|
+| Número | Código do país + DDD + número | +5511999999999 |
 
-> [!WARNING]
-> Este passo é **obrigatório**. Sem número autorizado, não é possível testar.
+> [!TIP]
+> Você pode cadastrar números de toda a sua equipe para que todos testem o bot durante o desenvolvimento.
 
-### Vinculando um bot
+### Testando diferentes bots
 
-1. Clique em **Editar Canal**
-2. No campo **Bot**, selecione seu bot
-3. Clique em **Salvar**
+O canal de teste permite trocar o bot vinculado a qualquer momento:
+
+1. Acesse o canal de teste
+2. Clique em **Editar Canal**
+3. Selecione outro bot
+4. Salve e envie uma nova mensagem
+
+A próxima mensagem enviada ao número de teste será processada pelo novo bot.
+
+### Limitações do ambiente de teste
+
+| Aspecto | Comportamento |
+|---------|---------------|
+| Número de envio | Compartilhado entre todos os usuários Meta |
+| Números autorizados | Máximo de 30 por canal |
+| Funcionalidades | Todas disponíveis (agendamento, atendimento humano, etc.) |
+| Custo | Gratuito |
+| Mensagens ativas | Não é possível enviar mensagens proativas |
+
+> [!NOTE]
+> No ambiente de teste, você só pode responder a mensagens iniciadas por você. Mensagens proativas (templates) só funcionam em canais de produção.
 
 ## WhatsApp Business
 
@@ -209,19 +244,37 @@ graph TD
 
 ## Solução de problemas
 
-### Canal não recebe mensagens
+### Canal de teste não responde
+
+1. **Verifique se seu número está autorizado**
+   - Acesse o canal de teste
+   - Confira se seu número aparece na lista de números autorizados
+   - O formato deve ser internacional: `+5511999999999`
+
+2. **Verifique se há um bot vinculado**
+   - O canal precisa ter um bot selecionado
+   - O bot deve estar **publicado** (não apenas salvo)
+
+3. **Confirme o número de destino**
+   - Envie mensagens para `+1 555 190-6729`
+   - Não use outro número
+
+4. **Aguarde alguns segundos**
+   - A primeira mensagem pode levar até 10 segundos para processar
+
+### Canal de produção não recebe mensagens
 
 1. Verifique se o canal está **Ativo**
-2. Confirme se há um **Bot vinculado**
-3. Cheque se o número está **Autorizado** (teste)
-4. Verifique a conexão com a Meta (produção)
+2. Confirme se há um **Bot vinculado** e **publicado**
+3. Verifique a conexão com a Meta no painel do canal
+4. Cheque se o número do WhatsApp Business está operacional
 
 ### Bot não responde
 
 1. Verifique se o bot está **Publicado**
 2. Confira se o bot está **Vinculado ao canal**
-3. Teste o bot no **Visualizador**
-4. Verifique logs de erro
+3. Teste o bot no **Visualizador** do editor
+4. Verifique se não há erros no fluxo
 
 ### Mensagens atrasadas
 

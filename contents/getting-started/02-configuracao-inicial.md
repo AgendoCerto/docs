@@ -170,52 +170,44 @@ Após criar, clique no bot para abrir o editor:
 
 ## Etapa 5: Configurar canal de teste
 
-O canal conecta o bot ao WhatsApp.
+O canal de teste é um ambiente sandbox que permite testar seu bot antes de colocá-lo em produção.
 
 ### Como acessar
 
 1. Vá em **Configurações** → **Canais**
 2. Clique no **Canal de Teste**
 
-### Sobre o canal de teste
+### Vincular o bot
 
-Ambiente seguro para testar seu bot antes da produção:
+1. Clique em **Editar Canal**
+2. Selecione o bot que você criou
+3. Clique em **Salvar**
 
-- Não envia mensagens para clientes reais
-- Permite testar todas as funcionalidades
-- Ideal para validar o fluxo
+### Cadastrar seu número
 
-### Números autorizados
-
-Autorize seu número para receber mensagens do canal de teste:
+Para testar, você precisa autorizar seu telefone:
 
 1. Na seção **Números Autorizados**, clique em **Adicionar Número**
-2. Digite seu número com DDD: `5511999999999`
+2. Digite seu número no formato internacional: `+5511999999999`
 3. Clique em **Salvar**
 
 > [!WARNING]
-> Este passo é **obrigatório**. Sem um número autorizado, não é possível testar o bot.
+> Sem um número autorizado, suas mensagens serão ignoradas pelo sistema.
 
 ---
 
-## Etapa 6: Vincular bot ao canal
+## Etapa 6: Testar o bot
 
-Conecte o bot ao canal de teste.
+Agora você pode testar o bot no WhatsApp.
 
-### Como fazer
+### Como testar
 
-1. Na tela do Canal de Teste, clique em **Editar Canal**
-2. No campo **Bot**, selecione o bot criado
-3. Clique em **Salvar**
-
-### Testando
-
-1. Abra o WhatsApp
-2. Envie uma mensagem para o número do Canal de Teste
-3. O bot responderá automaticamente
+1. No WhatsApp, adicione o número `+1 555 190-6729` aos seus contatos
+2. Envie uma mensagem para esse número
+3. O bot vinculado ao seu canal responderá automaticamente
 
 > [!TIP]
-> O número do Canal de Teste está na tela de configuração do canal.
+> O número `+1 555 190-6729` é o sandbox oficial da Meta. Todas as mensagens enviadas para ele são roteadas com base no seu número cadastrado.
 
 ---
 
